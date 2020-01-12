@@ -62,7 +62,7 @@ const nodeinfo2 = async () => {
 				email: config.maintainerEmail
 			},
 			enableRecaptcha: config.recaptchaSiteKey && config.recaptchaSecretKey,
-			maxNoteTextLength: 500,
+			maxNoteTextLength: 2000,
 			enableServiceWorker: config.swPublicKey && config.swPrivateKey
 		}
 	};

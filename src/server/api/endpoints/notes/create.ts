@@ -46,7 +46,7 @@ export const meta = {
 
 		text: {
 			validator: $.optional.nullable.str.pipe(text =>
-				text.trim() != '' && length(text.trim()) <= 500
+				text.trim() != '' && length(text.trim()) <= 2000
 			),
 			default: null as any,
 			desc: {
