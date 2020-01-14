@@ -8,7 +8,7 @@
 	<header>
 		<button class="cancel _button" @click="cancel"><fa :icon="faTimes"/></button>
 		<div>
-			<span class="text-count" :class="{ over: trimmedLength(text) > 500 }">{{ 500 - trimmedLength(text) }}</span>
+			<span class="text-count" :class="{ over: trimmedLength(text) > 2000 }">{{ 2000 - trimmedLength(text) }}</span>
 			<button class="submit _buttonPrimary" :disabled="!canPost" @click="post">{{ submitText }}</button>
 		</div>
 	</header>
@@ -156,7 +156,7 @@ export default Vue.extend({
 		canPost(): boolean {
 			return !this.posting &&
 				(1 <= this.text.length || 1 <= this.files.length || this.poll || this.renote) &&
-				(length(this.text.trim()) <= 500) &&
+				(length(this.text.trim()) <= 2000) &&
 				(!this.poll || this.pollChoices.length >= 2);
 		}
 	},
